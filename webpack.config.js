@@ -2,18 +2,18 @@ var path    = require('path');
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
-var config = {
+module.exports = {
   devtool: 'sourcemap',
   entry: {},
   module: {
     loaders: [
-      { test: /\.js$/, exclude: [/app\/lib/, /node_modules/], loader: 'ng-annotate!babel' },
-      { test: /\.html$/, loader: 'raw' },
-      { test: /\.styl$/, loader: 'style!css!stylus' },
-      { test: /\.css$/, loader: 'style!css' },
-      { test: /lodash/, loader: 'exports?_' }
+       { test: /\.js$/, exclude: [/app\/lib/, /node_modules/], loader: 'ng-annotate!babel' },
+       { test: /\.pug$/, loader: 'pug-html-loader' },
+       { test: /\.html$/, loader: 'raw' },
+       { test: /\.styl$/, loader: 'style!css!stylus' },
+       { test: /\.css$/, loader: 'style!css' }
     ]
-  }
+  },
   plugins: [
     // Injects bundles in your index.html instead of wiring all manually.
     // It also adds hash to all injected assets so we don't have problems
@@ -34,5 +34,3 @@ var config = {
     })
   ]
 };
-
-module.exports = config;

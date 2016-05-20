@@ -1,7 +1,7 @@
 {
-  "name": "ng6-starter",
+  "name": "ng-es6-boilerplate",
   "version": "0.0.1",
-  "description": "Starter for Angular + ES6 + (Webpack or JSPM)",
+  "description": "Starter for Angular + ES6 + Webpack",
   "main": "index.js",
   "dependencies": {
     "angular": "^1.5.0",
@@ -17,6 +17,7 @@
     "chai": "^3.4.0",
     "connect-history-api-fallback": "^1.1.0",
     "css-loader": "^0.19.0",
+    "file-loader": "^0.8.5",
     "fs-walk": "0.0.1",
     "gulp": "^3.9.0",
     "gulp-rename": "^1.2.2",
@@ -33,6 +34,8 @@
     "mocha": "^2.3.0",
     "ng-annotate-loader": "0.0.10",
     "node-libs-browser": "^0.5.0",
+    "pug": "^2.0.0-alpha7",
+    "pug-html-loader": "^1.0.5",
     "raw-loader": "^0.5.1",
     "run-sequence": "^1.1.0",
     "style-loader": "^0.12.2",
@@ -53,8 +56,8 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/angularclass/NG6-starter.git"
+    "url": "https://github.com/kod88vn/ng-ecma6-boilerplate.git"
   },
-  "author": "AngularClass",
+  "author": "Jay Quach",
   "license": "Apache-2.0"
 }
