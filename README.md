@@ -1,5 +1,7 @@
 # ng-ecma6-boilerplate
-## template "borrowed" from ng6-start: https://github.com/AngularClass/NG6-starter
+## Intro
+Template "borrowed" from ng6-start: https://github.com/AngularClass/NG6-starter
+
 
 ## Installing
 * `npm install -g gulp karma karma-cli webpack` install global cli dependencies
