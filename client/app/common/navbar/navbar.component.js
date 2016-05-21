@@ -1,4 +1,4 @@
-import template from './navbar.html';
+import template from './navbar.pug';
 import controller from './navbar.controller';
 import './navbar.styl';
 
@@ -7,7 +7,7 @@ let navbarComponent = {
   bindings: {},
   template,
   controller,
-  controllerAs: 'vm'
+  controllerAs: 'navc'
 };
 
 export default navbarComponent;
