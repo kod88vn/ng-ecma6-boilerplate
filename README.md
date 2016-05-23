@@ -7,9 +7,8 @@ Template "borrowed" from ng6-start: https://github.com/AngularClass/NG6-starter
 * `npm install -g gulp karma karma-cli webpack` install global cli dependencies
 * `npm install` to install dependencies
 
-## Running the App
-NG6 uses Gulp to build and launch the development environment. After you have installed all dependencies, you may run the app. Running `gulp` will bundle the app with `webpack`, launch a development server, and watch all files. The port will be displayed in the terminal.
- 
+
+## Using
 ### Gulp Tasks
 Here's a list of available tasks:
 * `webpack`
@@ -38,7 +37,7 @@ Following a consistent directory structure between components offers us the cert
 ⋅⋅⋅⋅⋅⋅⋅⋅componentName.js // entry file where all its dependencies load
 ⋅⋅⋅⋅⋅⋅⋅⋅componentName.component.js
 ⋅⋅⋅⋅⋅⋅⋅⋅componentName.controller.js
-⋅⋅⋅⋅⋅⋅⋅⋅componentName.html
+⋅⋅⋅⋅⋅⋅⋅⋅componentName.pug // html template
 ⋅⋅⋅⋅⋅⋅⋅⋅componentName.styl // scoped to affect only its own template
 ⋅⋅⋅⋅⋅⋅⋅⋅componentName.spec.js // contains passing demonstration tests
 ```
