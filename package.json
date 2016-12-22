@@ -53,9 +53,10 @@
     "raw-loader": "^0.5.1",
     "run-sequence": "^1.1.0",
     "style-loader": "^0.12.2",
-    "stylus-loader": "^1.1.1",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^2.4.0",
     "supports-color": "^3.1.2",
-    "webpack": "^1.13.1",
+    "webpack": "^1.14.0",
     "webpack-dev-middleware": "^1.6.1",
     "webpack-hot-middleware": "^2.6.0",
     "yargs": "^3.9.0"
