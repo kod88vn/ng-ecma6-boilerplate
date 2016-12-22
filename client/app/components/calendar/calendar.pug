@@ -1,0 +1,11 @@
+div.align-center
+  h4 {{vm.month}}
+table.table.table-default
+  tr
+    th(ng-repeat="d in vm.days track by $index")
+      | {{d}}
+  tr(ng-repeat="w in vm.calendar track by $index")
+    td(ng-repeat="d in w track by $index")
+      | {{d.getDate()}}
+
+
