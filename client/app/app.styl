@@ -1,5 +1,13 @@
+@import './common/theme-variables.styl'
 @import './common/common.styl'
 @import './common/mixins.styl'
 
 .app
   height 100%
+  span
+    color $light-gray
+  .muted
+    color lighten($light-gray, 30%)
+  .marked
+    background-color $light-red
+    color lighten($light-gray, 90%)

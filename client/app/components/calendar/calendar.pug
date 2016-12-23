@@ -1,11 +1,34 @@
-div.align-center
-  h4 {{vm.month}}
-table.table.table-default
-  tr
-    th(ng-repeat="d in vm.days track by $index")
-      | {{d}}
-  tr(ng-repeat="w in vm.calendar track by $index")
-    td(ng-repeat="d in w track by $index")
-      | {{d.getDate()}}
+script(type='text/ng-template', id='appt.html').
+  <div class="modal-body" id="modal-body" ng-click="apptCtrl.onClick()">
+    <div class="form-group">
+      <label>Name:</label>
+      <input type="text" class="form-control" placeholder="name" ng-model="apptCtrl.appointment.name">
+    </div>
+    <div class="form-group">
+      <label>Phone Number:</label>
+      <input type="tel" class="form-control" placeholder="phone number" ng-model="apptCtrl.appointment.phone">
+    </div>
+  </div>
+
+.calendar
+  div.align-center.week-navigator
+    h4 {{cactrl.month}} {{cactrl.now.getFullYear()}}
+    span.glyphicon.glyphicon-triangle-left.pull-left.cursor-pointer(ng-click="cactrl.toPreviousWeek()")
+    span.glyphicon.glyphicon-triangle-right.pull-right.cursor-pointer(ng-click="cactrl.toNextWeek()")
+  table.table.table-default
+    tr
+      th
+      th(ng-repeat="d in cactrl.daysOfWeek track by $index")
+        span(ng-class="{'muted': $first || $last }") {{::cactrl.days[$index]}} {{d.getDate() + 1}}
+    tr.height-60(ng-repeat="ts in cactrl.timeSlots track by $index")
+      td.time-slot.position-relative.width-60.height-40
+        span.position-absolute {{ts}}
+          | {{cactrl.appointments[[d, ts]].phone}}
+      td.appt.cursor-pointer(ng-repeat="d in cactrl.daysOfWeek track by $index", ng-click='cactrl.open(d, ts)', ng-class="{'marked': !!cactrl.appointments[[d, ts]].name && !!cactrl.appointments[[d, ts]].phone}")
+        div(ng-if="!!cactrl.appointments[[d, ts]].name && !!cactrl.appointments[[d, ts]].phone")
+          div
+            | Name: {{cactrl.appointments[[d, ts]].name}}
+          div
+            | Phone Number: {{cactrl.appointments[[d, ts]].phone}}
 
 

@@ -7,7 +7,7 @@ let calendarComponent = {
   bindings: {},
   template,
   controller,
-  controllerAs: 'vm'
+  controllerAs: 'cactrl'
 };
 
 export default calendarComponent;

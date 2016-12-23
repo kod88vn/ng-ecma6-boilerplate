@@ -1,4 +1,5 @@
 //- Custom Css Mixins
+.muted
 
 // Used as a lengthy text, ellipsis replacement
 fade-overflow($suffix='medium',$startColor=rgba(0,0,0,0),$endColor=#fff)
@@ -271,6 +272,8 @@ misc()
 //-Build out margins, paddings, and widths programmatically from mixins
 provision-attribute('margin','mgn')
 provision-attribute('padding','pad')
+provision-attribute('top','top')
+provision-attribute('bottom','bottom')
 provision-widths()
 provision-heights()
 misc()

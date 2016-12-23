@@ -31,7 +31,7 @@ class dateUtilsService
 
   getDaysOfWeek(date)
   {
-    var days = new Array();
+    var days = [];
     for (var i = 0; i < 7; i++)
     {
       days[i] = new Date(
@@ -41,9 +41,23 @@ class dateUtilsService
     }
     return days;
   }
+
+  getTimeSlots() {
+    return [
+      '9 AM',
+      '10 AM',
+      '11 AM',
+      '12 PM',
+      '1 PM',
+      '2 PM',
+      '3 PM',
+      '4 PM',
+      '5 PM'
+    ];
+  }
 }
 
-let dateUtils = angular.module('dateUtils', [])
+let module = angular.module('dateUtils', [])
 .service('dateUtils', dateUtilsService);
 
-export default dateUtils;
+export default module;
